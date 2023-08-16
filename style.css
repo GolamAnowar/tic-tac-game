@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    transition: all .5s linear;
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: #27ac60;
+}
+.select-box, .play-board, .result-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.select-box{
+    background: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+.select-box.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.select-box header{
+    font-size: 2rem;
+}
+.select-box .title{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.select-box .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.select-box .options button{
+    padding: 1rem 1.5rem;
+    background: #27ac60;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+
+
+.play-board{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.play-board.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.play-board .details{
+    background: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+}
+.play-board .players{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.play-board .players span{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    color: #27ac60;
+    cursor: default;
+    z-index: 5;
+}
+.play-board .players .slider{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #27ac60;
+    border-radius: .5rem;
+}
+.play-board .players.active span:first-child{
+    color: #27ac60;
+}
+.play-board .players.active span{
+    color: #fff;
+}
+.play-board .players.active .slider{
+    left: 50%;
+}
+.play-board .players span:first-child{
+    color: #fff;
+}
+.play-board section{
+    display: flex;
+    gap: .5rem;
+}
+.play-board section span{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    margin: .5rem;
+    font-size: 5rem;
+    color: #27ac60;
+    text-align: center;
+    line-height: 80px;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.result-box{
+    background: #fff;
+    border-radius: .5rem;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.result-box.show{
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.result-box .won-text{
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.result-box button{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #27ac60;
+    cursor: pointer;
+    border-radius: .5rem;
+}
